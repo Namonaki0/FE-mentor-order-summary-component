@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: center hsl(225deg, 100%, 94%) url("/images/pattern-background-mobile.svg") no-repeat;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  text-align: center;
+}
+
+main {
+  background: hsl(225deg, 100%, 98%);
+  border-radius: 20px;
+  max-width: 330px;
+}
+main .hero-wrapper img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main section {
+  padding: 1.5rem 1.2rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+main section h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+main section p {
+  font-size: 16px;
+  color: hsl(224deg, 23%, 55%);
+  margin-bottom: 1.5rem;
+}
+main section .order-plan {
+  background: hsla(220deg, 10%, 88%, 0.925);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 0 0.8rem 0 0.2rem;
+}
+main section .order-plan .order-plan-inner {
+  display: flex;
+  padding: 0.8rem 0.5rem;
+}
+main section .order-plan .order-plan-inner img {
+  margin-right: 1rem;
+}
+main section .order-plan .order-plan-inner span {
+  display: block;
+  font-weight: 700;
+}
+main section .order-plan .order-plan-inner span:nth-of-type(2) {
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+}
+main section .order-plan a {
+  font-size: 14px;
+  font-weight: 700;
+}
+main section .order-final .payment-btn {
+  all: unset;
+  background: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 98%);
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.8rem 0;
+  font-size: small;
+  margin-bottom: 1rem;
+}
+main section .order-final span {
+  font-size: small;
+  font-weight: 700;
+  color: hsl(224deg, 23%, 55%);
+}
+
+/*# sourceMappingURL=styles.css.map */
