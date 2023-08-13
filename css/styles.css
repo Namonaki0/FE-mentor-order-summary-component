@@ -14,12 +14,25 @@ body {
   place-content: center;
   text-align: center;
 }
+@media (min-width: 1440px) {
+  body {
+    background: center hsl(225deg, 100%, 94%) url("/images/pattern-background-desktop.svg") no-repeat;
+    background-size: 110%;
+    background-position-y: -200px;
+  }
+}
 
 main {
   background: hsl(225deg, 100%, 98%);
   border-radius: 20px;
   max-width: 330px;
-  margin-top: -5rem;
+  box-shadow: 0 10px 20px hsla(224deg, 23%, 55%, 0.363);
+}
+@media (min-width: 1440px) {
+  main {
+    margin-top: 3.7rem;
+    max-width: 450px;
+  }
 }
 main .hero-wrapper img {
   display: block;
@@ -32,9 +45,20 @@ main section {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+@media (min-width: 1440px) {
+  main section {
+    padding: 3rem 3rem;
+  }
+}
 main section h1 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+}
+@media (min-width: 1440px) {
+  main section h1 {
+    font-size: 1.78rem;
+    font-weight: 800;
+  }
 }
 main section p {
   font-size: 16px;
@@ -43,6 +67,12 @@ main section p {
   margin: 0 auto;
   margin-bottom: 1.8rem;
   width: 90%;
+}
+@media (min-width: 1440px) {
+  main section p {
+    font-size: 17px;
+    width: 95%;
+  }
 }
 main section .order-plan {
   background: hsla(224deg, 23%, 55%, 0.055);
@@ -53,6 +83,12 @@ main section .order-plan {
   margin-bottom: 1.5rem;
   padding: 0 0.8rem 0 0.2rem;
 }
+@media (min-width: 1440px) {
+  main section .order-plan {
+    padding: 0 1.5rem 0 0.8rem;
+    margin-bottom: 2.6rem;
+  }
+}
 main section .order-plan .order-plan-inner {
   display: flex;
   align-items: center;
@@ -61,11 +97,23 @@ main section .order-plan .order-plan-inner {
 main section .order-plan .order-plan-inner img {
   margin-right: 1.5rem;
 }
+@media (min-width: 1440px) {
+  main section .order-plan .order-plan-inner img {
+    margin-right: 1rem;
+  }
+}
 main section .order-plan .order-plan-inner span {
   display: block;
   font-weight: 700;
   font-size: 0.9rem;
   line-height: 24px;
+}
+@media (min-width: 1440px) {
+  main section .order-plan .order-plan-inner span {
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 28px;
+  }
 }
 main section .order-plan .order-plan-inner span:nth-of-type(2) {
   font-weight: 500;
@@ -74,6 +122,10 @@ main section .order-plan .order-plan-inner span:nth-of-type(2) {
 main section .order-plan a {
   font-size: 14px;
   font-weight: 700;
+  transition: all 100ms linear;
+}
+main section .order-plan a:hover, main section .order-plan a:focus {
+  opacity: 0.8;
 }
 main section .order-final .payment-btn {
   all: unset;
@@ -85,11 +137,27 @@ main section .order-final .payment-btn {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
+  transition: all 100ms linear;
+  cursor: pointer;
+}
+main section .order-final .payment-btn:hover, main section .order-final .payment-btn:focus {
+  opacity: 0.7;
+}
+@media (min-width: 1440px) {
+  main section .order-final .payment-btn {
+    margin-bottom: 2rem;
+  }
 }
 main section .order-final span {
+  display: block;
   font-size: 15px;
   font-weight: 700;
   color: hsl(224deg, 23%, 55%);
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+main section .order-final span:hover, main section .order-final span:focus {
+  color: hsl(223deg, 47%, 23%);
 }
 
 /*# sourceMappingURL=styles.css.map */

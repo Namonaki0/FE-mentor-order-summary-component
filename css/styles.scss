@@ -12,6 +12,8 @@ $dark-blue: hsl(223, 47%, 23%);
 $pale-blue: hsl(225, 100%, 94%);
 $bright-blue: hsl(245, 75%, 52%);
 
+$transition: all 100ms linear;
+
 * {
   margin: 0;
   padding: 0;
@@ -27,13 +29,25 @@ body {
   height: 100vh;
   place-content: center;
   text-align: center;
+
+  @media (min-width: 1440px) {
+    background: center $pale-blue url("/images/pattern-background-desktop.svg")
+      no-repeat;
+    background-size: 110%;
+    background-position-y: -200px;
+  }
 }
 
 main {
   background: $very-pale-blue;
   border-radius: 20px;
   max-width: 330px;
-  margin-top: -5rem;
+  box-shadow: 0 10px 20px hsla(224, 23%, 55%, 0.363);
+
+  @media (min-width: 1440px) {
+    margin-top: 3.7rem;
+    max-width: 450px;
+  }
 
   .hero-wrapper {
     img {
@@ -49,9 +63,18 @@ main {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 
+    @media (min-width: 1440px) {
+      padding: 3rem 3rem;
+    }
+
     h1 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
+
+      @media (min-width: 1440px) {
+        font-size: 1.78rem;
+        font-weight: 800;
+      }
     }
 
     p {
@@ -61,6 +84,11 @@ main {
       margin: 0 auto;
       margin-bottom: 1.8rem;
       width: 90%;
+
+      @media (min-width: 1440px) {
+        font-size: 17px;
+        width: 95%;
+      }
     }
 
     .order-plan {
@@ -72,13 +100,23 @@ main {
       margin-bottom: 1.5rem;
       padding: 0 0.8rem 0 0.2rem;
 
+      @media (min-width: 1440px) {
+        padding: 0 1.5rem 0 0.8rem;
+        margin-bottom: 2.6rem;
+      }
+
       .order-plan-inner {
         display: flex;
         align-items: center;
         padding: 0.8rem 0.7rem;
 
+
         img {
           margin-right: 1.5rem;
+
+          @media (min-width: 1440px) {
+            margin-right: 1rem;
+          }
         }
 
         span {
@@ -86,6 +124,12 @@ main {
           font-weight: 700;
           font-size: 0.9rem;
           line-height: 24px;
+
+          @media (min-width: 1440px) {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 28px;
+          }
         }
 
         span:nth-of-type(2) {
@@ -97,6 +141,12 @@ main {
       a {
         font-size: 14px;
         font-weight: 700;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
       }
     }
 
@@ -111,12 +161,31 @@ main {
         font-size: 14px;
         letter-spacing: 1px;
         margin-bottom: 1.5rem;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+        }
+
+        @media (min-width: 1440px) {
+          margin-bottom: 2rem;
+        }
       }
 
       span {
+        display: block;
         font-size: 15px;
         font-weight: 700;
         color: $desaturated-blue;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+          color: $dark-blue;
+        }
       }
     }
   }
