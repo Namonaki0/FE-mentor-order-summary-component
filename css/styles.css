@@ -7,9 +7,10 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
-  background: center hsl(225deg, 100%, 94%) url("/images/pattern-background-mobile.svg") no-repeat;
+  background: top hsl(225deg, 100%, 94%) url("/images/pattern-background-mobile.svg") no-repeat;
+  background-size: contain;
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   place-content: center;
   text-align: center;
 }
@@ -18,6 +19,7 @@ main {
   background: hsl(225deg, 100%, 98%);
   border-radius: 20px;
   max-width: 330px;
+  margin-top: -5rem;
 }
 main .hero-wrapper img {
   display: block;
@@ -26,21 +28,24 @@ main .hero-wrapper img {
   border-top-right-radius: 20px;
 }
 main section {
-  padding: 1.5rem 1.2rem;
+  padding: 2rem 1.5rem;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 main section h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 main section p {
   font-size: 16px;
+  line-height: 25px;
   color: hsl(224deg, 23%, 55%);
-  margin-bottom: 1.5rem;
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+  width: 90%;
 }
 main section .order-plan {
-  background: hsla(220deg, 10%, 88%, 0.925);
+  background: hsla(224deg, 23%, 55%, 0.055);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,14 +55,17 @@ main section .order-plan {
 }
 main section .order-plan .order-plan-inner {
   display: flex;
-  padding: 0.8rem 0.5rem;
+  align-items: center;
+  padding: 0.8rem 0.7rem;
 }
 main section .order-plan .order-plan-inner img {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 main section .order-plan .order-plan-inner span {
   display: block;
   font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 24px;
 }
 main section .order-plan .order-plan-inner span:nth-of-type(2) {
   font-weight: 500;
@@ -73,12 +81,13 @@ main section .order-final .payment-btn {
   color: hsl(225deg, 100%, 98%);
   width: 100%;
   border-radius: 10px;
-  padding: 0.8rem 0;
-  font-size: small;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
 }
 main section .order-final span {
-  font-size: small;
+  font-size: 15px;
   font-weight: 700;
   color: hsl(224deg, 23%, 55%);
 }
