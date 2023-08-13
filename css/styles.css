@@ -124,8 +124,12 @@ main section .order-plan a {
   font-weight: 700;
   transition: all 100ms linear;
 }
+main section .order-plan a:visited {
+  color: hsl(245deg, 75%, 52%);
+}
 main section .order-plan a:hover, main section .order-plan a:focus {
-  opacity: 0.8;
+  opacity: 0.7;
+  text-decoration: none;
 }
 main section .order-final .payment-btn {
   all: unset;
